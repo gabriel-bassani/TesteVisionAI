@@ -4,6 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@google-cloud/storage": "^5.18.1",
+    "@google-cloud/vision": "^2.4.2",
     "axios": "^0.25.0"
   }
 }

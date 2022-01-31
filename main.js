@@ -1,14 +1,24 @@
 const axios = require("axios");
+const vision = require("@google-cloud/vision");
 
 axios
-  .post("https://vision.googleapis.com/v1/images:annotate", {
-    "requests": [
+  .post(
+    "https://vision.googleapis.com/v1/images:annotate?key=AIzaSyAOy_S14NgYNSmvKh0XyPWoFhapzVnLgcU",
+    {
+      requests: [
         {
-          object (AnnotateImageRequest)
-        }
+          image: {
+            content: "",
+          },
+          features: [
+            {
+              type: "TEXT_DETECTION",
+            },
+          ],
+        },
       ],
-    "parent": string
-  })
+    }
+  )
   .then(function (response) {
     console.log(response);
   })
